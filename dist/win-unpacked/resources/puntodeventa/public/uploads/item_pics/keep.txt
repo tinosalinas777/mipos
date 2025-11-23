@@ -1,1 +1,0 @@
-esta carpeta debe mantener algun archivo para que al ejecutar npm run build la carpeta se copie y no de error al ejecutar la app

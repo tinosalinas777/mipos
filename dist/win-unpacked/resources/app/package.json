@@ -1,6 +1,0 @@
-{
-  "name": "ospos-electron",
-  "version": "1.0.0",
-  "main": "main.js",
-  "description": "OSPOS Offline Electron App"
-}
