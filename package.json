@@ -1,0 +1,58 @@
+{
+  "name": "ospos-electron",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "OSPOS Offline Electron App",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --publish=never"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^26.0.12"
+  },
+ "build": {
+  "appId": "com.crisroot.pos",
+  "productName": "MiPOS",
+  "asar": false,
+
+  "files": [
+    "main.js",
+    "preload.js",
+    "start-php.js",
+    "package.json",
+    "node_modules/**/*",
+
+    "puntodeventa/**/*",
+    "php/**/*"
+  ],
+
+  "extraResources": [
+    {
+      "from": "php",
+      "to": "php"
+    },
+    {
+      "from": "puntodeventa",
+      "to": "puntodeventa"
+    }
+  ],
+
+  "directories": {
+    "output": "dist"
+  },
+
+  "win": {
+    "target": "nsis",
+    "forceCodeSigning": false
+  },
+
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory": true
+  }
+}
+
+}
